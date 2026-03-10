@@ -1,0 +1,114 @@
+.programs-section {
+    background-color: var(--bg-secondary);
+    position: relative;
+}
+
+.programs-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.program-item {
+    background-color: rgba(24, 24, 27, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    position: relative;
+}
+
+/* Border Gradient Effect on Hover */
+.program-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--gradient-neon);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.program-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(14, 165, 233, 0.15);
+    border-color: rgba(14, 165, 233, 0.3);
+}
+
+.program-item:hover::before {
+    opacity: 1;
+}
+
+.program-content {
+    padding: 40px;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.program-level {
+    display: inline-block;
+    align-self: flex-start;
+    background: rgba(14, 165, 233, 0.1);
+    color: var(--accent-color);
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border: 1px solid rgba(14, 165, 233, 0.2);
+}
+
+.program-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.program-desc {
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+    flex-grow: 1;
+    /* Ensures button stays at bottom if we want that, or just spacing */
+}
+
+.program-link {
+    color: var(--text-primary);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+    margin-top: auto;
+    /* Pushes link to bottom of card */
+}
+
+.program-link:hover {
+    color: var(--highlight-color);
+    /* Use highlight color */
+}
+
+@media screen and (max-width: 768px) {
+    .program-content {
+        padding: 30px;
+    }
+
+    .program-title {
+        font-size: 1.5rem;
+    }
+}

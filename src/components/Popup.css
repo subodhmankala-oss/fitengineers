@@ -1,0 +1,219 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    /* Ensure it's on top of everything */
+    backdrop-filter: blur(5px);
+}
+
+.popup-success h2 {
+    display: contents;
+}
+
+.popup-content {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 500px;
+    padding: 40px 30px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    animation: popupFadeIn 0.3s ease-out forwards;
+    max-height: 90vh;
+
+}
+
+@keyframes popupFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.popup-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 10px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.popup-header p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.popup-stepper {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.step-indicator {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: #999;
+    font-size: 1.1rem;
+}
+
+.step-indicator.active {
+    background-color: var(--accent-color);
+    /* #4364BD */
+    color: #ffffff;
+    border-color: var(--accent-color);
+}
+
+.step-content h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #4a4a4a;
+    font-size: 0.95rem;
+}
+
+.popup-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    transition: border-color 0.2s;
+    background-color: #fff;
+}
+
+.popup-input:focus {
+    border-color: var(--accent-color);
+}
+
+.popup-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+}
+
+.popup-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.btn-back {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #666;
+    transition: all 0.2s;
+}
+
+.btn-back:hover {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.btn-next {
+    background-color: var(--accent-color);
+    /* #4364BD */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    /* Pill shape like screenshot */
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-left: auto;
+    /* Push to right */
+    box-shadow: 0 4px 15px rgba(67, 100, 189, 0.3);
+}
+
+.btn-next:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(67, 100, 189, 0.4);
+}
+
+.popup-success {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #e6f7e6;
+    color: #28a745;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+.popup-success h2 {
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.popup-success p {
+    color: #666;
+    margin-bottom: 30px;
+}
