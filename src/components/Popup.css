@@ -42,7 +42,7 @@
     }
 }
 
-.close-btn {
+.popup-close-btn {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -53,7 +53,7 @@
     transition: color 0.2s;
 }
 
-.close-btn:hover {
+.popup-close-btn:hover {
     color: #333;
 }
 

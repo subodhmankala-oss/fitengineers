@@ -69,7 +69,7 @@ const ChatBox = () => {
                             <MessageCircle size={20} />
                             <span>Support Chat</span>
                         </div>
-                        <button className="close-btn" onClick={() => setIsOpen(false)}>
+                        <button className="chatbox-close-btn" onClick={() => setIsOpen(false)}>
                             <X size={20} />
                         </button>
                     </div>

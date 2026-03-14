@@ -178,13 +178,16 @@
         height: 100vh;
         position: absolute;
         top: 80px;
-        left: -100%;
-        background-color: #ffffff;
+        left: -110vw;
+        background-color: var(--bg-primary);
         transition: all 0.5s ease;
         align-items: center;
         justify-content: flex-start;
         padding-top: 100px;
-        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        z-index: 1000;
+        margin: 0;
+        box-sizing: border-box;
     }
 
     .nav-menu.active {
@@ -193,6 +196,14 @@
 
     .nav-item {
         margin: 20px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link {
+        display: inline-block;
+
+        padding: 10px 0;
     }
 
     .nav-btn {

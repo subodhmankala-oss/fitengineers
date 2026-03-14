@@ -95,7 +95,7 @@ const Popup = ({ externalOpen, setExternalOpen }) => {
     return (
         <div className="popup-overlay">
             <div className="popup-content">
-                <button className="close-btn" onClick={closePopup}>
+                <button className="popup-close-btn" onClick={closePopup}>
                     <X size={24} />
                 </button>
 

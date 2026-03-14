@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Twitter, Facebook } from 'lucide-react';
+import { Instagram, Twitter, Facebook, Youtube } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
@@ -10,8 +10,8 @@ const Footer = () => {
                     FIT<span className="text-highlight">ENGINEERSS</span>
                 </div>
                 <div className="social-links">
-                    <a href="#" className="social-icon"><Instagram /></a>
-                    <a href="#" className="social-icon"><Twitter /></a>
+                    <a target="_blank" href="https://www.instagram.com/lilswaaggg/" className="social-icon"><Instagram /></a>
+                    <a href="#" className="social-icon"><Youtube /></a>
                     <a href="#" className="social-icon"><Facebook /></a>
                 </div>
                 <p className="copyright">

@@ -70,7 +70,7 @@
     font-size: 1.1rem;
 }
 
-.close-btn {
+.chatbox-close-btn {
     background: transparent;
     border: none;
     color: white;
@@ -83,7 +83,7 @@
     border-radius: 4px;
 }
 
-.close-btn:hover {
+.chatbox-close-btn:hover {
     opacity: 0.8;
     background: rgba(255, 255, 255, 0.1);
 }

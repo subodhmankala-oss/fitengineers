@@ -105,7 +105,7 @@
     .about-content h2 {
         text-align: center;
         left: 50%;
-        transform: translateX(-50%);
+        /*transform: translateX(-50%);*/
     }
 
     .about-content h2::after {
@@ -119,5 +119,16 @@
 
     .about-image::before {
         display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-stats {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
     }
 }

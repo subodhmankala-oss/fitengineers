@@ -61,3 +61,17 @@
     font-size: 0.95rem;
     margin-top: 10px;
 }
+
+@media screen and (max-width: 480px) {
+    .footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer-logo {
+        font-size: 1.4rem;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+}

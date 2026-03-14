@@ -100,3 +100,18 @@
 .pricing-card .btn {
     width: 100%;
 }
+
+@media screen and (max-width: 960px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .pricing-card.popular {
+        transform: scale(1);
+    }
+
+    .pricing-card.popular:hover {
+        transform: translateY(-10px);
+    }
+}
