@@ -11,7 +11,7 @@ const Pricing = () => {
     const plans = [
         {
             name: "Basic",
-            price: "Inr 12,000",
+            price: "Inr 15,000",
             period: "/mo",
             features: ["Custom Workout Plan", "Weekly Check-ins", "Nutritional Plan Support Goals"]
         },
@@ -24,7 +24,7 @@ const Pricing = () => {
         },
         {
             name: "Elite",
-            price: "Inr 70,000",
+            price: "Inr 65,000",
             period: "/6 months",
             features: ["1-on-1 Virtual Sessions", "Advanced Nutrition Plan", "Daily Accountability", "Priority Support", "All Pro Features"]
         }
