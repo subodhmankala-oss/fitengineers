@@ -8,17 +8,11 @@ const SEO = ({ title, description, name, type }) => {
             <title>{title}</title>
             <meta name='description' content={description} />
             {/* End standard metadata tags */}
-            {/* Facebook tags */}
+            {/* Facebook & Instagram tags (Open Graph) */}
             <meta property='og:type' content={type} />
             <meta property='og:title' content={title} />
             <meta property='og:description' content={description} />
-            {/* End Facebook tags */}
-            {/* Twitter tags */}
-            <meta name='twitter:creator' content={name} />
-            <meta name='twitter:card' content={type} />
-            <meta name='twitter:title' content={title} />
-            <meta name='twitter:description' content={description} />
-            {/* End Twitter tags */}
+            {/* End Facebook & Instagram tags */}
         </Helmet>
     );
 };
