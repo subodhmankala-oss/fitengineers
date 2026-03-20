@@ -1,26 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Volume2, VolumeX, Music } from 'lucide-react';
 import './MusicPlayer.css';
 
 const MusicPlayer = () => {
     const [isPlaying, setIsPlaying] = useState(false);
-    // You will need to put an MP3 file named 'background-music.mp3' in your public folder!
-    const [audio] = useState(new Audio('/background-music.mp3.mp3'));
+    // Audio is instantiated via useRef on click to prevent 30MB preload blocking Core Web Vitals
+    const audioRef = useRef(null);
 
     useEffect(() => {
-        audio.loop = true;
         // Clean up audio on unmount
         return () => {
-            audio.pause();
+            if (audioRef.current) {
+                audioRef.current.pause();
+            }
         };
-    }, [audio]);
+    }, []);
 
     const togglePlay = () => {
+        if (!audioRef.current) {
+            audioRef.current = new Audio('/background-music.mp3.mp3');
+            audioRef.current.loop = true;
+        }
+
         if (isPlaying) {
-            audio.pause();
+            audioRef.current.pause();
         } else {
             // Browsers heavily restrict autoplay, so playing specifically on click is best practice.
-            audio.play().catch(error => console.log("Audio play failed:", error));
+            audioRef.current.play().catch(error => console.log("Audio play failed:", error));
         }
         setIsPlaying(!isPlaying);
     };
