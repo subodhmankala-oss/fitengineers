@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Footer from './components/Footer';
@@ -34,11 +35,13 @@ const AppContent = () => {
 
 function App() {
   return (
-    <PopupProvider>
-      <Router>
-        <AppContent />
-      </Router>
-    </PopupProvider>
+    <HelmetProvider>
+      <PopupProvider>
+        <Router>
+          <AppContent />
+        </Router>
+      </PopupProvider>
+    </HelmetProvider>
   );
 }
 

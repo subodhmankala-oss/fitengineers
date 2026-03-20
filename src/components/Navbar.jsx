@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 
@@ -9,13 +9,16 @@ const Navbar = () => {
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
     const location = useLocation();
+    const navigate = useNavigate();
+    const isManualNavigation = useRef(false);
+    const scrollTimeout = useRef(null);
 
     useEffect(() => {
         // Update active link based on current path
         const path = location.pathname;
         if (path === '/') setActiveLink('home');
         else setActiveLink(path.substring(1));
-    }, [location]);
+    }, [location.pathname]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -29,30 +32,30 @@ const Navbar = () => {
             }
             setLastScrollY(currentScrollY);
 
+            // Skip spy logic if we are auto-scrolling due to a click
+            if (isManualNavigation.current) return;
+
             // Scroll Spy Logic
             const sections = ['home', 'about', 'services', 'programs', 'pricing', 'contact'];
 
-            // Find the section that is currently active
-            // We consider a section active if it crosses the middle of the viewport (or slightly above 3/4 center as requested)
-            const scrollPosition = window.scrollY + (window.innerHeight / 2);
+            // Find the section that is currently active in the middle of the viewport
+            const viewportCenter = window.innerHeight / 2;
 
             for (const sectionId of sections) {
                 const element = document.getElementById(sectionId);
                 if (element) {
-                    const { offsetTop, offsetHeight } = element;
-                    if (
-                        scrollPosition >= offsetTop &&
-                        scrollPosition < offsetTop + offsetHeight
-                    ) {
+                    const rect = element.getBoundingClientRect();
+                    // Check if the center of the viewport intersects this element
+                    if (rect.top <= viewportCenter && rect.bottom > viewportCenter) {
                         if (activeLink !== sectionId) {
                             setActiveLink(sectionId);
-                            // Update URL without reloading or jumping
+                            // Update URL using React Router without causing Home to auto-scroll
                             const newPath = sectionId === 'home' ? '/' : `/${sectionId}`;
                             if (location.pathname !== newPath) {
-                                window.history.replaceState(null, '', newPath);
+                                navigate(newPath, { replace: true, state: { preventScroll: true } });
                             }
                         }
-                        break; // Stop after finding the first match
+                        break; // Stop after finding the match
                     }
                 }
             }
@@ -72,15 +75,12 @@ const Navbar = () => {
         setIsOpen(false);
         setActiveLink(id);
 
-        // Determine target ID based on the link clicked
-        const targetId = id || 'home';
-
-        // Scroll to center of the viewport
-        const element = document.getElementById(targetId);
-        if (element) {
-            // Use center block alignment as requested
-            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
+        // Lock scroll spy to prevent URL glitches during smooth scroll
+        isManualNavigation.current = true;
+        if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
+        scrollTimeout.current = setTimeout(() => {
+            isManualNavigation.current = false;
+        }, 1200); // 1.2s timeout for smooth scroll to finish
     };
 
     return (

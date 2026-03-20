@@ -29,14 +29,14 @@ const MyPrograms = () => {
                 <h2>MY <span className="text-accent">PROGRAMS</span></h2>
                 <div className="programs-wrapper">
                     {programs.map((prog, index) => (
-                        <div className="program-item" key={index}>
+                        <article className="program-item" key={index}>
                             <div className="program-content">
                                 <span className="program-level">{prog.level}</span>
                                 <h3 className="program-title">{prog.title}</h3>
                                 <p className="program-desc">{prog.desc}</p>
                                 <button onClick={openPopup} className="program-link" style={{ textDecoration: 'underline', border: 'none', background: 'transparent', cursor: 'pointer', fontFamily: 'inherit', padding: 0 }}>Join Program &rarr;</button>
                             </div>
-                        </div>
+                        </article>
                     ))}
                 </div>
             </div>

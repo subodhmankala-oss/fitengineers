@@ -36,7 +36,7 @@ const Pricing = () => {
                 <h2>Choose your <span className="text-accent">Commitment level</span></h2>
                 <div className="pricing-grid">
                     {plans.map((plan, index) => (
-                        <div className={`pricing-card ${plan.popular ? 'popular' : ''}`} key={index}>
+                        <article className={`pricing-card ${plan.popular ? 'popular' : ''}`} key={index}>
                             {plan.popular && <div className="popular-badge">Most Popular</div>}
                             <h3 className="plan-name">{plan.name}</h3>
                             <div className="plan-price">
@@ -51,7 +51,7 @@ const Pricing = () => {
                                 ))}
                             </ul>
                             <button onClick={openPopup} className={`btn ${plan.popular ? 'btn-primary' : 'btn-outline'} w-100 mt-auto`}>Choose Plan</button>
-                        </div>
+                        </article>
                     ))}
                 </div>
             </div>

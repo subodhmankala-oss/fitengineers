@@ -27,11 +27,11 @@ const Services = () => {
                 <h2>MY <span className="text-accent">SERVICES</span></h2>
                 <div className="services-grid">
                     {services.map((service, index) => (
-                        <div className="service-card" key={index}>
+                        <article className="service-card" key={index}>
                             <div className="service-icon">{service.icon}</div>
                             <h3 className="service-title">{service.title}</h3>
                             <p className="service-desc">{service.description}</p>
-                        </div>
+                        </article>
                     ))}
                 </div>
             </div>

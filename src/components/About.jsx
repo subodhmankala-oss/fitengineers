@@ -7,7 +7,7 @@ const About = () => {
             <div className="container about-container">
                 <div className="about-image">
                     {/* Placeholder for trainer image - User should save their image as trainer.png in public folder */}
-                    <img src="/trainer.png" alt="Trainer" className="trainer-img" onError={(e) => {
+                    <img src="/trainer.png" alt="Subodh Mankala - Certified Personal Trainer in Hyderabad" className="trainer-img" onError={(e) => {
                         e.target.style.display = 'none';
                         e.target.nextSibling.style.display = 'flex';
                     }} />
