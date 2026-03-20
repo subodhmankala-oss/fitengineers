@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Twitter, Facebook, Youtube } from 'lucide-react';
+import { Instagram, Facebook, Youtube, Linkedin } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
@@ -11,8 +11,9 @@ const Footer = () => {
                 </div>
                 <div className="social-links">
                     <a target="_blank" href="https://www.instagram.com/lilswaaggg/" className="social-icon"><Instagram /></a>
-                    <a href="#" className="social-icon"><Youtube /></a>
-                    <a href="#" className="social-icon"><Facebook /></a>
+                    <a target="_blank" href="https://www.facebook.com/mankala.subodh" className="social-icon"><Facebook /></a>
+                    <a target="_blank" href="https://youtube.com/@subodhmankala?si=s4iKxS1jttcag8-4" className="social-icon"><Youtube /></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/subodh-mankala-65800272/" className="social-icon"><Linkedin /></a>
                 </div>
                 <p className="copyright">
                     &copy; {new Date().getFullYear()} FitEngineerss. All rights reserved.
