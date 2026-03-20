@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -150,6 +150,20 @@ const Navbar = () => {
                             >
                                 Pricing
                             </Link>
+                        </li>
+                        <li className="nav-item dropdown">
+                            <Link
+                                to="/blog"
+                                className={`nav-link ${activeLink === 'blog' ? 'active' : ''}`}
+                                onClick={() => handleNavClick('blog')}
+                            >
+                                Blog <ChevronDown size={14} style={{marginLeft: '2px', position: 'relative', top: '2px'}} />
+                            </Link>
+                            <ul className="dropdown-menu">
+                                <li><Link to="/blog?category=Nutrition" onClick={() => handleNavClick('blog')}>Nutrition</Link></li>
+                                <li><Link to="/blog?category=Fitness" onClick={() => handleNavClick('blog')}>Fitness</Link></li>
+                                <li><Link to="/blog?category=Wellness" onClick={() => handleNavClick('blog')}>Wellness</Link></li>
+                            </ul>
                         </li>
                     </ul>
 

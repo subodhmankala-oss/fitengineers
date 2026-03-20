@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import Blog from './components/Blog';
+import BlogPost from './components/BlogPost';
 import Footer from './components/Footer';
 import Popup from './components/Popup';
 import MusicPlayer from './components/MusicPlayer';
@@ -26,6 +28,8 @@ const AppContent = () => {
         <Route path="/programs" element={<Home />} />
         <Route path="/pricing" element={<Home />} />
         <Route path="/contact" element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
       <Footer />
       <ChatBox />
