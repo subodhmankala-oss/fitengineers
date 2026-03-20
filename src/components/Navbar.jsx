@@ -17,6 +17,7 @@ const Navbar = () => {
         // Update active link based on current path
         const path = location.pathname;
         if (path === '/') setActiveLink('home');
+        else if (path.startsWith('/blog')) setActiveLink('blog');
         else setActiveLink(path.substring(1));
     }, [location.pathname]);
 
