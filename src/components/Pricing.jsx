@@ -46,7 +46,7 @@ const Pricing = () => {
         },
         {
             name: "Elite",
-            price: "Inr 65,000",
+            price: "Inr 62,000",
             period: "6 Months",
             features: []
         }
