@@ -1,11 +1,12 @@
 .blog-post-page {
-    padding-top: 100px;
+    padding-top: 50px;
     min-height: 100vh;
     padding-bottom: 80px;
 }
 
 .blog-post-container {
-    max-width: 800px; /* Narrower for better reading experience */
+    max-width: 800px;
+    /* Narrower for better reading experience */
 }
 
 .back-link {
@@ -60,7 +61,7 @@
     border-radius: 16px;
     overflow: hidden;
     margin-bottom: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border: var(--glass-border);
 }
 
@@ -112,7 +113,7 @@
     .post-title {
         font-size: 2.2rem;
     }
-    
+
     .post-hero-image {
         height: 250px;
     }

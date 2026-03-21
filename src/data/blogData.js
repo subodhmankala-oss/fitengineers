@@ -6,6 +6,7 @@ export const blogPosts = [
         excerpt: "You can't just train your way to a long life. Learn how to fuel your body for better workouts and a higher quality of life by maximizing your 'Strengthspan'.",
         category: "Nutrition",
         date: "March 21, 2026",
+        createdAt: "2026-03-21T10:00:00Z",
         image: "https://images.unsplash.com/photo-1494390248081-4e521a5940db?q=80&w=2000&auto=format&fit=crop",
         content: `
             <p>You can't just train your way to longevity. While building muscle and lifting heavy are crucial, the way you fuel your body dictates your <strong>Strengthspan</strong>—the length of time in your life where you are highly capable, strong, and injury-free.</p>
@@ -118,6 +119,41 @@ export const blogPosts = [
                 <li>Walking 10,000 steps.</li>
                 <li>Ensuring every meal has a protein source.</li>
             </ul>
+        `
+    },
+    {
+        id: 5,
+        slug: "3-ways-naturally-lower-cholesterol",
+        title: "3 Ways to Naturally Lower Cholesterol Levels",
+        excerpt: "Discover three natural strategies to improve your cholesterol levels through smart nutrition choices, movement, and heart-focused habits.",
+        date: "March 21, 2026",
+        createdAt: "2026-03-21T16:00:00Z",
+        category: "Nutrition",
+        image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2000&auto=format&fit=crop",
+        content: `
+            <p>Heart health is the foundation of a long, active life. Whether you're lifting heavy in the gym or just trying to keep up with your kids, keeping your cholesterol in check is non-negotiable. Here are three natural ways to lower your cholesterol levels and protect your heart.</p>
+            
+            <h2>1. Boost Your Soluble Fiber Intake</h2>
+            <p>Soluble fiber acts like a sponge in your digestive tract, binding with cholesterol and sweeping it out of the body before it gets absorbed. Just 5–10 grams of soluble fiber daily can reduce LDL (bad cholesterol) by up to 10%.</p>
+            <ul>
+                <li><strong>The Fix:</strong> Start your day with a bowl of oats or buckwheat topped with berries, chia seeds, and flax seeds.</li>
+                <li><strong>Dietary Sources:</strong> You can also find high amounts of soluble fiber in beans, apples, lentils, and psyllium husk.</li>
+            </ul>
+
+            <h2>2. Swap in Healthy Fats</h2>
+            <p>Not all fats are equal. Replacing saturated fats with unsaturated fats can dramatically improve your lipid profile, raising HDL ("good" cholesterol) while lowering triglycerides.</p>
+            <ul>
+                <li><strong>The Fix:</strong> Use extra virgin olive oil instead of butter for your daily cooking.</li>
+                <li><strong>Dietary Sources:</strong> Eat more avocados, nuts, and seeds. Try to add fatty fish like wild-caught salmon, sardines, or mackerel to your diet twice a week.</li>
+            </ul>
+
+            <h2>3. Move More, Stress Less</h2>
+            <p>Your heart is a muscle, and physical activity strengthens it while clearing LDL particles from your bloodstream. Aim for at least 150 minutes per week of moderate-intensity cardio paired with 2-3 dedicated strength training days.</p>
+            <p>Don't forget that <strong>stress plays a massive role in your heart health</strong>. High daily stressors can directly negatively impact your lipid panels. Look at your daily load and find ways to decrease the mental burden—whether through meditation, walks, or better sleep hygiene.</p>
+
+            <h2>Genetics Matter, Too</h2>
+            <p>If you have a family history of heart disease, lifestyle changes alone might not be enough. Be proactive: get screened early and repeat tests often. Talk to your healthcare provider about advanced lipid testing.</p>
+            <p>Your heart works 24/7. Take care of it naturally and consistently by eating more fiber, choosing healthy fats, and keeping your body moving!</p>
         `
     }
 ];

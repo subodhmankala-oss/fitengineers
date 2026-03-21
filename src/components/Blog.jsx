@@ -12,18 +12,25 @@ const Blog = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, [categoryFilter]);
 
-    const filteredPosts = categoryFilter 
-        ? blogPosts.filter(post => post.category === categoryFilter)
-        : blogPosts;
+    const sortedPosts = [...blogPosts].sort((a, b) => {
+        const timeB = new Date(b.createdAt || b.date).getTime();
+        const timeA = new Date(a.createdAt || a.date).getTime();
+        const timeDiff = timeB - timeA;
+        return timeDiff === 0 ? b.id - a.id : timeDiff;
+    });
+
+    const filteredPosts = categoryFilter
+        ? sortedPosts.filter(post => post.category === categoryFilter)
+        : sortedPosts;
 
     return (
         <div className="blog-page">
-            <SEO 
-                title="Health & Fitness Blog | Subodh Mankala" 
-                description="Read the latest articles on fitness, nutrition, and wellness by expert personal trainer Subodh Mankala in Hyderabad." 
-                type="website" 
+            <SEO
+                title="Health & Fitness Blog | Subodh Mankala"
+                description="Read the latest articles on fitness, nutrition, and wellness by expert personal trainer Subodh Mankala in Hyderabad."
+                type="website"
             />
-            
+
             <section className="blog-header">
                 <div className="container">
                     <h1 className="blog-title">
