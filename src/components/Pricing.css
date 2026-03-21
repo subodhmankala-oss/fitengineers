@@ -96,6 +96,11 @@
     flex-shrink: 0;
 }
 
+.text-center-s {
+    text-align: center;
+    padding: 0 50px;
+}
+
 /* Specific button overrides for pricing cards if needed */
 .pricing-card .btn {
     width: 100%;
