@@ -158,7 +158,7 @@ const Navbar = () => {
                                 className={`nav-link ${activeLink === 'blog' ? 'active' : ''}`}
                                 onClick={() => handleNavClick('blog')}
                             >
-                                Blog <ChevronDown size={14} style={{marginLeft: '2px', position: 'relative', top: '2px'}} />
+                                Blog <ChevronDown size={14} style={{ marginLeft: '2px', position: 'relative', top: '2px' }} />
                             </Link>
                             <ul className="dropdown-menu">
                                 <li><Link to="/blog?category=Nutrition" onClick={() => handleNavClick('blog')}>Nutrition</Link></li>

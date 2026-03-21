@@ -229,6 +229,11 @@
 }
 
 @media screen and (max-width: 960px) {
+    .logo-text {
+        font-size: 1.15rem;
+        white-space: nowrap;
+    }
+
     .nav-menu {
         display: flex;
         flex-direction: column;
@@ -253,14 +258,15 @@
     }
 
     .nav-item {
-        margin: 20px 0;
+        margin: 10px 0;
         width: 100%;
         text-align: center;
     }
 
     .nav-link {
-        display: inline-block;
-
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
         padding: 10px 0;
     }
 
@@ -286,12 +292,12 @@
         margin-top: 10px;
         display: none;
     }
-    
+
     .nav-item.dropdown:hover .dropdown-menu,
     .nav-item.dropdown:active .dropdown-menu {
         display: block;
     }
-    
+
     .dropdown-menu::before {
         display: none;
     }
