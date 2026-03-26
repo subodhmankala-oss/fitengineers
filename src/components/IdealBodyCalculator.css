@@ -1,0 +1,528 @@
+.calculator-section {
+    background-color: var(--bg-primary);
+    background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.4) 0%, var(--bg-primary) 500px), url('/personal-trainer-body-composition-assessment.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 70%;
+    min-height: 80vh;
+}
+
+
+
+.pb-100 {
+    padding-bottom: 100px;
+}
+
+.calculator-header {
+    text-align: center;
+    width: 100%;
+}
+
+.calculator-header p {
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.calculator-container-ibw {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+    .calculator-container-ibw {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Card Common */
+.calculator-form-container,
+.calculator-results-container {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Tabs */
+.unit-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.unit-tab {
+    flex: 1;
+    padding: 15px;
+    background: transparent;
+    color: var(--text-secondary);
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.unit-tab:hover {
+    color: var(--text-primary);
+}
+
+.unit-tab.active {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Form */
+.ibw-form {
+    padding: 30px;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.form-row>label {
+    width: 90px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.form-control {
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
+}
+
+select.form-control option {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.input-suffix {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.radio-group {
+    display: flex;
+    gap: 25px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.radio-label input[type="radio"] {
+    accent-color: var(--accent-color);
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.input-with-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-unit {
+    position: absolute;
+    right: 15px;
+    color: var(--text-secondary);
+    pointer-events: none;
+    font-size: 0.9rem;
+}
+
+.multi-input-group {
+    display: flex;
+    gap: 15px;
+}
+
+.ml-2 {
+    margin-left: 10px;
+}
+
+/* Buttons */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+    margin-left: 90px;
+}
+
+.btn-calculate,
+.btn-clear {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: inherit;
+}
+
+.btn-calculate {
+    background: var(--accent-color);
+    color: white;
+}
+
+.btn-calculate:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+.btn-clear {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-clear:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Results */
+.result-header {
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 25px;
+}
+
+.result-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+}
+
+.result-body {
+    padding: 25px;
+}
+
+.result-intro {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+}
+
+.ibw-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.ibw-table th {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-primary);
+    font-weight: 600;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.ibw-table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.ibw-table tr:last-child td {
+    border-bottom: none;
+}
+
+.alt-row {
+    background-color: rgba(255, 255, 255, 0.015);
+}
+
+.weight-value {
+    color: var(--accent-color) !important;
+    font-weight: 700;
+}
+
+/* Related Section */
+.mt-50 {
+    margin-top: 50px;
+}
+
+.related-calculators {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 25px 20px 20px 20px;
+    position: relative;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.related-label {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-primary);
+    padding: 4px 15px;
+    border: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--bg-secondary);
+    border-radius: 8px 8px 0 0;
+    font-weight: bold;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+.related-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+.btn-related {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-primary);
+    padding: 10px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-related:hover {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.radio-label input[type="radio"]:checked+span {
+    color: var(--accent-color);
+}
+
+/* Custom Select Component Styling */
+.custom-select-container {
+    position: relative;
+    width: 100%;
+    user-select: none;
+}
+
+.custom-select-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.custom-select-trigger.open {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
+}
+
+.custom-select-arrow {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+    color: var(--text-secondary);
+}
+
+.custom-select-dropdown {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    /* Reduced to guarantee overflow visibility */
+    overflow-y: auto;
+    background: #111;
+    /* deeper sleek black */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.custom-select-option {
+    padding: 12px 15px;
+    cursor: pointer;
+    color: var(--text-primary);
+    transition: background 0.2s ease, color 0.2s ease;
+    text-transform: capitalize;
+}
+
+.custom-select-option:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.custom-select-option.selected {
+    background: rgba(14, 165, 233, 0.15);
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Enhanced scrollbar for select dropdown */
+.custom-select-dropdown::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-select-dropdown::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.custom-select-dropdown::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+}
+
+.custom-select-dropdown::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Macros Tabbed Layout */
+.macro-results-panel {
+    width: 100%;
+}
+
+.macro-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.macro-tabs button {
+    flex: 1;
+    padding: 12px 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-size: 0.95rem;
+    font-weight: 500;
+    min-width: 100px;
+}
+
+.macro-tabs button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.macro-tabs button.active {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+.macro-result-table-wrapper {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.macro-result-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.macro-result-table td {
+    border-bottom: 1px solid var(--border-color);
+    padding: 18px 25px;
+}
+
+.macro-result-table tr:last-child td {
+    border-bottom: none;
+}
+
+.macro-result-table .macro-label {
+    width: 40%;
+    font-weight: 600;
+    color: var(--text-primary);
+    border-right: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.macro-result-table .macro-label small {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: normal;
+    margin-top: 4px;
+}
+
+.macro-result-table .macro-value {
+    background: rgba(14, 165, 233, 0.05);
+}
+
+.macro-result-table .val-main {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.macro-result-table .val-main strong {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-right: 5px;
+}
+
+.macro-result-table .macro-range {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+/* Hide bulky native browser spin buttons on number inputs */
+.form-control[type="number"]::-webkit-outer-spin-button,
+.form-control[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form-control[type="number"] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}

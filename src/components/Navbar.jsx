@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, ArrowLeft } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [activeLink, setActiveLink] = useState('home');
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
@@ -74,6 +75,7 @@ const Navbar = () => {
 
     const handleNavClick = (id) => {
         setIsOpen(false);
+        setIsDropdownOpen(false);
         setActiveLink(id);
 
         // Lock scroll spy to prevent URL glitches during smooth scroll
@@ -156,14 +158,25 @@ const Navbar = () => {
                             <Link
                                 to="/blog"
                                 className={`nav-link ${activeLink === 'blog' ? 'active' : ''}`}
-                                onClick={() => handleNavClick('blog')}
+                                onClick={(e) => {
+                                    if (window.innerWidth <= 960) {
+                                        e.preventDefault();
+                                        setIsDropdownOpen(!isDropdownOpen);
+                                    } else {
+                                        handleNavClick('blog');
+                                    }
+                                }}
                             >
-                                Blog <ChevronDown size={14} style={{ marginLeft: '2px', position: 'relative', top: '2px' }} />
+                                Article <ChevronDown size={14} style={{ marginLeft: '2px', position: 'relative', top: '2px' }} />
                             </Link>
-                            <ul className="dropdown-menu">
+                            <ul className={`dropdown-menu ${isDropdownOpen ? 'mobile-open' : ''}`}>
+                                <li className="mobile-back-btn" onClick={() => setIsDropdownOpen(false)}>
+                                    <ArrowLeft size={24} /> <span>Back</span>
+                                </li>
                                 <li><Link to="/blog?category=Nutrition" onClick={() => handleNavClick('blog')}>Nutrition</Link></li>
                                 <li><Link to="/blog?category=Fitness" onClick={() => handleNavClick('blog')}>Fitness</Link></li>
                                 <li><Link to="/blog?category=Wellness" onClick={() => handleNavClick('blog')}>Wellness</Link></li>
+                                <li><Link to="/ideal-body-calculator" onClick={() => handleNavClick('ideal-body-calculator')}>Ideal body calculator</Link></li>
                             </ul>
                         </li>
                     </ul>

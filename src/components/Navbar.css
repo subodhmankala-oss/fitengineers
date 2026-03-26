@@ -235,7 +235,7 @@
         width: 100%;
         height: 100vh;
         position: absolute;
-        top: 80px;
+        top: 50px;
         left: -110vw;
         background-color: var(--bg-primary);
         transition: all 0.5s ease;
@@ -288,12 +288,79 @@
         display: none;
     }
 
-    .nav-item.dropdown:hover .dropdown-menu,
-    .nav-item.dropdown:active .dropdown-menu {
+    /* Mobile Dropdown Overlay Refined Styles */
+    .dropdown-menu.mobile-open {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        height: 100vh;
+        background: rgba(15, 15, 19, 0.98);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        z-index: 2500;
+        /* Higher than main menu toggle */
+        margin-top: 0;
+        padding-top: 0;
+        border: none;
+        border-radius: 0;
+        animation: fadeInOverlay 0.3s ease;
+    }
+
+    .mobile-back-btn {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: var(--text-primary);
+        cursor: pointer;
+        padding: 10px;
+        display: flex !important;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        list-style: none !important;
+        width: auto !important;
+        margin: 0 !important;
+    }
+
+    .dropdown-menu.mobile-open li {
+        margin: 20px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-menu.mobile-open li a {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        padding: 20px;
         display: block;
+    }
+
+    @keyframes fadeInOverlay {
+        from {
+            opacity: 0;
+            transform: translateX(-50%) translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
     }
 
     .dropdown-menu::before {
         display: none;
     }
+}
+
+.dropdown-menu::before {
+    display: none;
+}
 }

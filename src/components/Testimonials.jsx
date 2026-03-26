@@ -8,7 +8,7 @@ const Testimonials = () => {
         {
             id: 1,
             name: 'Deepak Kumar',
-            avatar: 'https://i.pravatar.cc/150?img=11',
+            avatar: '/client1.png',
             rating: 5,
             text: 'I heard about FITscript via Twitter after following Michael for a year. This program has cut out all the myths and BS with lifting and eating and has made it super simple to follow. The team has so much energy and sincere commitment to my health. Can\'t wait for my lab work and my future success to loving longer and a healthier life.',
             date: 'Feb 26, 2025'
@@ -16,7 +16,7 @@ const Testimonials = () => {
         {
             id: 2,
             name: 'Nishant Dubey',
-            avatar: 'https://i.pravatar.cc/150?img=12',
+            avatar: '/client2.png',
             rating: 5,
             text: 'Came across FitScript on X. Really awesome community of people looking to improve fitness and lifestyle. Direct and personalized coaching on stress reduction, nutrition, sleep, exercise and general health. Science backed approach that is easy to integrate into daily routine.',
             date: 'Feb 27, 2025'
@@ -35,8 +35,8 @@ const Testimonials = () => {
                         <div className="avatars-group">
                             <img src="https://i.pravatar.cc/150?img=33" alt="user" className="tiny-avatar" />
                             <img src="https://i.pravatar.cc/150?img=59" alt="user" className="tiny-avatar" />
-                            <img src="https://i.pravatar.cc/150?img=11" alt="user" className="tiny-avatar" />
-                            <img src="https://i.pravatar.cc/150?img=12" alt="user" className="tiny-avatar" />
+                            <img src="/client1.png" alt="user" className="tiny-avatar" />
+                            <img src="/client2.png" alt="user" className="tiny-avatar" />
                         </div>
                         <div className="rating-text">
                             <div className="stars-row">

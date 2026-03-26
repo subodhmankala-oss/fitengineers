@@ -4,6 +4,13 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Blog from './components/Blog';
 import BlogPost from './components/BlogPost';
+import IdealBodyCalculator from './components/IdealBodyCalculator';
+import BMICalculator from './components/BMICalculator';
+import BodyFatCalculator from './components/BodyFatCalculator';
+import CalorieCalculator from './components/CalorieCalculator';
+import ProteinCalculator from './components/ProteinCalculator';
+import CarbCalculator from './components/CarbCalculator';
+import MacrosCalculator from './components/MacrosCalculator';
 import Footer from './components/Footer';
 import Popup from './components/Popup';
 import MusicPlayer from './components/MusicPlayer';
@@ -30,6 +37,13 @@ const AppContent = () => {
         <Route path="/contact" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/ideal-body-calculator" element={<IdealBodyCalculator />} />
+        <Route path="/bmi-calculator" element={<BMICalculator />} />
+        <Route path="/body-fat-calculator" element={<BodyFatCalculator />} />
+        <Route path="/calorie-calculator" element={<CalorieCalculator />} />
+        <Route path="/protein-calculator" element={<ProteinCalculator />} />
+        <Route path="/carb-calculator" element={<CarbCalculator />} />
+        <Route path="/macros-calculator" element={<MacrosCalculator />} />
       </Routes>
       <Footer />
       <ChatBox />
