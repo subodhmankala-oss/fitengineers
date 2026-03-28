@@ -5,7 +5,6 @@ import './Hero.css';
 const Hero = () => {
     return (
         <section className="hero" id="home">
-            <div className="hero-overlay"></div>
             <div className="container hero-content">
                 <h1 className="hero-title">
                     TRANSFORM YOUR <span className="text-accent">BODY</span><br />
