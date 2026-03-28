@@ -73,6 +73,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Blog Post: Top 3 Ingredients for Better Sleep -->
+  <url>
+    <loc>https://fitengineerss.com/blog/top-3-ingredients-better-sleep</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Calculators Section -->
   <url>
     <loc>https://fitengineerss.com/ideal-body-calculator</loc>

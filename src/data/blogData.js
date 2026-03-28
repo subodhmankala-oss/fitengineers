@@ -155,5 +155,46 @@ export const blogPosts = [
             <p>If you have a family history of heart disease, lifestyle changes alone might not be enough. Be proactive: get screened early and repeat tests often. Talk to your healthcare provider about advanced lipid testing.</p>
             <p>Your heart works 24/7. Take care of it naturally and consistently by eating more fiber, choosing healthy fats, and keeping your body moving!</p>
         `
+    },
+    {
+        id: 6,
+        slug: "top-3-ingredients-better-sleep",
+        title: "The Top 3 Ingredients to Help You Get a Better Night's Sleep",
+        excerpt: "Discover the top three natural ingredients that support deeper sleep, faster recovery, and better morning energy.",
+        date: "March 27, 2026",
+        createdAt: "2026-03-27T10:00:00Z",
+        category: "Wellness",
+        image: "https://images.unsplash.com/photo-1758524941065-7d1182f5497f?q=80&w=2000&auto=format&fit=crop",
+        content: `
+            <p>Both falling asleep and staying asleep can sometimes be the hardest part of the day. If you’re struggling to catch quality Zzz's, check out these top three natural ingredients to add to your bedtime routine.</p>
+            
+            <h2>1. Glycine</h2>
+            <p><strong>Glycine</strong> is an amino acid that helps lower your core body temperature, which serves as a key trigger for falling asleep faster. It also boosts serotonin without overstimulating the nervous system.</p>
+            <ul>
+                <li><strong>How to use:</strong> Opt for 3g (in powder or capsule form) about 30–60 minutes before bed. It’s naturally sweet, so it mixes perfectly with herbal teas or plain water.</li>
+            </ul>
+
+            <h2>2. Tart Cherry Extract</h2>
+            <p>Known as nature’s melatonin booster, tart cherries naturally contain melatonin and help increase tryptophan availability, supporting deeper, more stable sleep. Bonus benefit: it’s also a powerful anti-inflammatory.</p>
+            <ul>
+                <li><strong>How to use:</strong> Aim for 1/2 cup of tart cherry juice or take an extract capsule 1–2 hours before bed. Look for Montmorency cherries for the highest melatonin levels.</li>
+            </ul>
+
+            <h2>3. Magnesium</h2>
+            <p>Magnesium is the nervous system whisperer. It helps regulate GABA (a calming neurotransmitter) and relaxes both your muscles and mind, signaling to your brain that it’s time to shut down for the day.</p>
+            <ul>
+                <li><strong>How to use:</strong> Take Magnesium Glycinate or 200–400 mg Magnesium L-Threonate about an hour before bed. Magnesium Glycinate works synergistically with glycine for a deeper calming effect.</li>
+            </ul>
+
+            <h2>Additional Sleep Hygiene Habits</h2>
+            <p>Don’t rely solely on supplements for a better night’s sleep. Adhere to this checklist for your best snooze yet:</p>
+            <ul>
+                <li>Sleep in a dark room with blackout shades.</li>
+                <li>Set the temperature to 68ºF (or lower).</li>
+                <li>Avoid screens and blue light in bed or at least one hour before sleeping.</li>
+                <li>Limit stress and heightened emotional states before bed.</li>
+                <li>Incorporate pre-sleep meditation to slow your heart rate.</li>
+            </ul>
+        `
     }
 ];

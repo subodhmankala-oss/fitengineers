@@ -223,6 +223,10 @@
     background: rgba(255, 255, 255, 0.05);
 }
 
+.mobile-back-btn {
+    display: none;
+}
+
 @media screen and (max-width: 960px) {
     .logo-text {
         font-size: 1.15rem;
