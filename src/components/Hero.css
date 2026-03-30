@@ -5,7 +5,11 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    background-image: linear-gradient(to bottom,\n            rgba(9, 9, 11, 0.3) 0%,\n            rgba(9, 9, 11, 0.6) 70%,\n            rgba(9, 9, 11, 0.9) 100%), \n            url('/hero.jpg');
+    background-image: linear-gradient(to bottom,
+            rgba(9, 9, 11, 0.3) 0%,
+            rgba(9, 9, 11, 0.6) 70%,
+            rgba(9, 9, 11, 0.9) 100%), 
+            url('/hero.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
