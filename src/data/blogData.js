@@ -196,5 +196,45 @@ export const blogPosts = [
                 <li>Incorporate pre-sleep meditation to slow your heart rate.</li>
             </ul>
         `
+    },
+    {
+        id: 7,
+        slug: "contrast-training-benefits",
+        title: "Hot and Cold: The Simple Guide to Contrast Therapy",
+        excerpt: "Jumping into an ice bath after a hot sauna might sound crazy, but it’s one of the best ways to speed up your recovery, boost your focus, and build mental toughness.",
+        date: "April 6, 2026",
+        createdAt: "2026-04-06T10:00:00Z",
+        category: "Wellness",
+        image: "/contrast-therapy.png",
+        content: `
+            <p>You’ve probably seen the viral videos: people stepping out of a sweltering sauna straight into a freezing cold plunge. It looks intense, but this practice—known as <strong>contrast training</strong> or contrast therapy—is an incredible tool for both your body and your mind.</p>
+            <p>Here is why alternating between hot and cold is worth the discomfort, and how you can easily start doing it.</p>
+            
+            <h2>How It Heals Your Body</h2>
+            <p>Think of contrast therapy as a natural pump for your bloodstream.</p>
+            <ul>
+                <li><strong>The Heat:</strong> When you are in a sauna or taking a hot shower, your blood vessels open up (vasodilation). This rushes fresh blood, oxygen, and nutrients to your tired muscles.</li>
+                <li><strong>The Cold:</strong> When you hit the cold water, your vessels shrink rapidly (vasoconstriction). This acts like a flush, squeezing out metabolic waste and reducing inflammation from your body.</li>
+                <li><strong>The Result:</strong> By going back and forth, you dramatically speed up recovery and reduce muscle soreness compared to just resting. Regular sauna use is also heavily linked to long-term heart health.</li>
+            </ul>
+
+            <h2>Building Mental Toughness</h2>
+            <p>The physical benefits are great, but the mental clarity you get afterward is arguably the best part.</p>
+            <ul>
+                <li><strong>Instant Energy:</strong> Hitting the cold water spikes your norepinephrine and dopamine levels—chemicals in your brain responsible for focus and motivation. You will feel wide awake and incredibly sharp for hours.</li>
+                <li><strong>Stress Tolerance:</strong> By forcing your body to stay calm while stepping into freezing water, you are literally training your nervous system to handle stress better in real life.</li>
+            </ul>
+
+            <h2>A Simple Beginner's Routine</h2>
+            <p>You don't need to be an extreme athlete to start. Here is a science-backed, beginner-friendly way to try contrast therapy:</p>
+            <ul>
+                <li><strong>Heat (10-12 minutes):</strong> Sit in a sauna (150–170°F) or take a hot shower. Allow your body to relax and sweat.</li>
+                <li><strong>Cold (30-60 seconds):</strong> Plunge into a cold bath or turn your shower as cold as it goes. Control your breathing to calm your body.</li>
+                <li><strong>Rounds:</strong> Repeat this cycle 2 to 3 times.</li>
+                <li><strong>Pro-Tip:</strong> End on <strong>cold</strong> if you want to be alert and energetic for the day ahead. End on <strong>hot</strong> if you are doing this in the evening to relax before bed.</li>
+            </ul>
+
+            <p><em>Safety Note: Remember to stay hydrated. If you have any heart or blood pressure conditions, always talk to your doctor before trying extreme temperature shifts.</em></p>
+        `
     }
 ];
