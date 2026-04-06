@@ -54,11 +54,11 @@ const Home = () => {
                 type="website" 
             />
             <Hero />
+            <Testimonials />
             <About />
             <Services />
             <MyPrograms />
             <Pricing />
-            <Testimonials />
             <Contact />
         </main>
     );
