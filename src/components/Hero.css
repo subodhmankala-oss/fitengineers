@@ -27,12 +27,28 @@
 }
 
 .hero-title {
-    font-size: 4.2rem;
-    font-weight: 800;
-    margin-bottom: 25px;
-    line-height: 1.2;
-    letter-spacing: -2px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 35px;
+    letter-spacing: -1.5px;
     color: #ffffff;
+}
+
+.hero-title .title-primary {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.15;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.hero-title .title-secondary {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    line-height: 1.25;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    letter-spacing: -0.5px;
 }
 
 .hero-title .text-highlight {
@@ -75,8 +91,12 @@
 }
 
 @media screen and (max-width: 768px) {
-    .hero-title {
+    .hero-title .title-primary {
         font-size: 2.8rem;
+    }
+
+    .hero-title .title-secondary {
+        font-size: 1.8rem;
     }
 
     .hero-subtitle {
@@ -91,8 +111,12 @@
 }
 
 @media screen and (max-width: 480px) {
-    .hero-title {
-        font-size: 1.8rem;
+    .hero-title .title-primary {
+        font-size: 2.2rem;
+    }
+
+    .hero-title .title-secondary {
+        font-size: 1.4rem;
     }
 
     .hero-subtitle {

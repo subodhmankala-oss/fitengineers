@@ -10,14 +10,14 @@ const MyPrograms = () => {
             title: "Hypertrophy Master",
             desc: (
                 <>
-                    An 8-week program focused on maximum muscle growth using scientific principles of volume and intensity.<br /><br />
-                    Build visible muscle without guesswork.<br /><br />
-                    For lifters who are stuck at the same size despite training regularly.<br /><br />
-                    ✔️ Structured 8-week muscle plan<br />
-                    ✔️ Progressive overload system<br />
-                    ✔️ Gut-friendly diet guidance (better absorption = better growth)<br />
-                    ✔️ Weekly tracking & adjustments<br /><br />
-                    👉 If you’re training hard but not growing, this fixes it.
+                    👉 Gain visible muscle with better digestion in 8 weeks<br /><br />
+
+                    ✔️ Structured muscle-building plan<br /><br />
+                    ✔️ Progressive overload system<br /><br />
+                    ✔️ Gut-friendly nutrition<br /><br />
+                    ✔️ Weekly tracking<br /><br />
+
+                    👉 For: Skinny or stuck lifters
                 </>
             ),
             level: "Intermediate",
@@ -27,14 +27,14 @@ const MyPrograms = () => {
             title: "Fat Eraser",
             desc: (
                 <>
-                    High-intensity interval training combined with strength circuits to burn fat while preserving muscle.<br /><br />
-                    Lose fat without starving or ruining your gut.<br /><br />
-                    Perfect for busy professionals who feel bloated, low energy, and inconsistent.<br /><br />
-                    ✔️ Simple fat-loss workouts (no confusion)<br />
-                    ✔️ Easy-to-follow diet (Indian + gut-friendly)<br />
-                    ✔️ Habit system for consistency<br />
-                    ✔️ Bloating & digestion fixes<br /><br />
-                    👉 Lose fat, feel light, and stay consistent.
+                    👉 Lose 3–5kg + reduce bloating in 8 weeks<br /><br />
+
+                    ✔️ Simple fat loss workouts<br /><br />
+                    ✔️ Easy Indian diet<br /><br />
+                    ✔️ Gut-friendly combinations<br /><br />
+                    ✔️ Habit system<br /><br />
+
+                    👉 For: Busy professionals with fat gain + bloating<br /><br />
                 </>
             ),
             level: "Beginner",
@@ -44,14 +44,13 @@ const MyPrograms = () => {
             title: "Athlete Performance",
             desc: (
                 <>
-                    Explosive power and agility training designed for competitive athletes looking to gain an edge.<br /><br />
-                    Train like an athlete, not just a gym-goer.<br /><br />
-                    For advanced lifters who want strength, speed, and performance.<br /><br />
-                    ✔️ Power + strength programming<br />
-                    ✔️ Mobility & injury prevention<br />
-                    ✔️ Performance nutrition<br />
-                    ✔️ Recovery protocols<br /><br />
-                    👉 Build a body that performs, not just looks good.
+                    👉 Build strength, speed & endurance without burnout<br /><br />
+
+                    ✔️ Performance training<br /><br />
+                    ✔️ Mobility + recovery<br /><br />
+                    ✔️ Advanced nutrition<br /><br />
+
+                    👉 For: Advanced trainees<br /><br />
                 </>
             ),
             level: "Advanced",
@@ -63,6 +62,7 @@ const MyPrograms = () => {
         <section id="programs" className="programs-section">
             <div className="container">
                 <h2>MY <span className="text-accent">PROGRAMS</span></h2>
+                <p className="program-subtitle">All programs include gut-friendly nutrition for better absorption & results.</p>
                 <div className="programs-wrapper">
                     {programs.map((prog, index) => (
                         <article className="program-item" key={index}>

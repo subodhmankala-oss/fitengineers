@@ -26,6 +26,12 @@
     position: relative;
 }
 
+.program-subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
 /* Border Gradient Effect on Hover */
 .program-item::before {
     content: '';

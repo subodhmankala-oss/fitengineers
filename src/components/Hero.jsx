@@ -7,8 +7,8 @@ const Hero = () => {
         <section className="hero" id="home">
             <div className="container hero-content">
                 <h1 className="hero-title">
-                    TRANSFORM YOUR <span className="text-accent">BODY</span><br />
-                    TRANSFORM YOUR <span className="text-accent">LIFE</span>
+                    <span className="title-primary">Build Muscle. <span className="text-accent">Lose Fat.</span> Fix Your Gut.</span>
+                    <span className="title-secondary">No confusion. <span className="text-accent">No bloating.</span> Just results.</span>
                 </h1>
                 <p className="hero-subtitle">
                     Professional personal training tailored to your unique goals.
@@ -19,7 +19,7 @@ const Hero = () => {
                     <Link to="/services" className="btn btn-outline">Learn More</Link>
                 </div>
             </div>
-        </section>
+        </section >
     );
 };
 
