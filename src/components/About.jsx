@@ -67,6 +67,8 @@ const About = () => {
                             <span className="stat-label">Dedication</span>
                         </div>
                     </div>
+
+
                 </div >
             </div >
         </section >

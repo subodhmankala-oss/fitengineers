@@ -62,6 +62,9 @@ const MyPrograms = () => {
         <section id="programs" className="programs-section">
             <div className="container">
                 <h2>MY <span className="text-accent">PROGRAMS</span></h2>
+                <p className="about-text" style={{ fontWeight: '600', color: 'var(--accent-color)', marginBottom: '1.5rem', textAlign: 'center' }}>
+                    👉 We don’t just train your body — we fix your gut.
+                </p>
                 <p className="program-subtitle">All programs include gut-friendly nutrition for better absorption & results.</p>
                 <div className="programs-wrapper">
                     {programs.map((prog, index) => (

@@ -8,15 +8,15 @@ const Hero = () => {
             <div className="container hero-content">
                 <h1 className="hero-title">
                     <span className="title-primary">Build Muscle. <span className="text-accent">Lose Fat.</span> Fix Your Gut.</span>
-                    <span className="title-secondary">No confusion. <span className="text-accent">No bloating.</span> Just results.</span>
+                    <span className="title-secondary"><span className="text-accent"> Eating healthy but still bloated?</span><br></br>Training hard but not seeing results?</span>
                 </h1>
                 <p className="hero-subtitle">
-                    Professional personal training tailored to your unique goals.
-                    Start your journey to a stronger, healthier you today.
+                    We don’t just train your body — we fix your gut.
+
                 </p>
                 <div className="hero-btns">
-                    <Link to="/contact" className="btn btn-primary">Get Started</Link>
-                    <Link to="/services" className="btn btn-outline">Learn More</Link>
+                    <Link to="/contact" className="btn btn-primary">Start Transformation</Link>
+                    <Link to="/services" className="btn btn-outline">Fix My Gut</Link>
                 </div>
             </div>
         </section >

@@ -61,6 +61,9 @@ const Services = () => {
         <section id="services" className="services-section">
             <div className="container">
                 <h2>MY <span className="text-accent">SERVICES</span></h2>
+                <p className="about-text" style={{ fontWeight: '600', color: 'var(--accent-color)', marginBottom: '1.5rem', textAlign: 'center' }}>
+                    👉 We don’t just train your body — we fix your gut.
+                </p>
                 <div className="services-grid">
                     {services.map((service, index) => (
                         <article className="service-card" key={index}>
@@ -72,7 +75,7 @@ const Services = () => {
                     ))}
                 </div>
             </div>
-        </section>
+        </section >
     );
 };
 
