@@ -88,14 +88,6 @@ const Navbar = () => {
 
     return (
         <header className={`header-wrapper ${isVisible ? 'visible' : 'hidden'}`}>
-            <div className="carousel-container">
-                <div className="carousel-track">
-                    <span className="carousel-text">GET FLAT 15% OFF ON OUR 3-MONTH PERSONAL TRAINING PLAN — GET FLAT 20% OFF ON OUR 6-MONTH PERSONAL TRAINING PLAN</span>
-                    <span className="carousel-text">GET FLAT 15% OFF ON OUR 3-MONTH PERSONAL TRAINING PLAN — GET FLAT 20% OFF ON OUR 6-MONTH PERSONAL TRAINING PLAN</span>
-                    <span className="carousel-text">GET FLAT 15% OFF ON OUR 3-MONTH PERSONAL TRAINING PLAN — GET FLAT 20% OFF ON OUR 6-MONTH PERSONAL TRAINING PLAN</span>
-                    <span className="carousel-text">GET FLAT 15% OFF ON OUR 3-MONTH PERSONAL TRAINING PLAN — GET FLAT 20% OFF ON OUR 6-MONTH PERSONAL TRAINING PLAN</span>
-                </div>
-            </div>
             <nav className="navbar">
                 <div className="container navbar-container">
                     <Link
