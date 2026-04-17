@@ -13,7 +13,7 @@ import CarbCalculator from './components/CarbCalculator';
 import MacrosCalculator from './components/MacrosCalculator';
 import Footer from './components/Footer';
 import Popup from './components/Popup';
-import MusicPlayer from './components/MusicPlayer';
+
 import ChatBox from './components/ChatBox';
 import { PopupProvider, usePopup } from './context/PopupContext';
 import './App.css';
@@ -25,7 +25,7 @@ const AppContent = () => {
   return (
     <div className="app">
       <Popup externalOpen={isPopupOpen} setExternalOpen={closePopup} />
-      <MusicPlayer />
+
       <Navbar />
       <Routes>
         {/* Map all valid routes to Home, which handles the scrolling */}
