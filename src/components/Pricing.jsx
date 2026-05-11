@@ -11,20 +11,20 @@ const Pricing = () => {
     const onlinePlans = [
         {
             name: "Personalised Workout + Nutrition Plan",
-            price: "₹8,000",
+            price: "₹12,000",
             period: "Monthly",
             features: []
         },
         {
             name: "Personalised Workout + Nutrition Plan",
-            price: "₹22,000",
+            price: "₹33,000",
             period: "3 Months",
             features: [],
             popular: true
         },
         {
             name: "Personalised Workout + Nutrition Plan",
-            price: "₹40,000",
+            price: "₹60,000",
             period: "6 Months",
             features: []
         }
@@ -33,20 +33,20 @@ const Pricing = () => {
     const plans = [
         {
             name: "Basic",
-            price: "Inr 15,000",
+            price: "₹20,000",
             period: "Monthly",
             features: []
         },
         {
             name: "Pro",
-            price: "Inr 36,000",
+            price: "₹55,000",
             period: "3 Months",
             features: [],
             popular: true
         },
         {
             name: "Elite",
-            price: "Inr 62,000",
+            price: "₹1,00,000",
             period: "6 Months",
             features: []
         }
@@ -55,20 +55,20 @@ const Pricing = () => {
     const couplePlans = [
         {
             name: "Couple Plan",
-            price: "₹15,000",
+            price: "₹25,000",
             period: "Monthly",
             features: []
         },
         {
             name: "Couple Plan",
-            price: "₹40,000",
+            price: "₹75,000",
             period: "3 Months",
             features: [],
             popular: true
         },
         {
             name: "Couple Plan",
-            price: "₹70,000",
+            price: "₹1,35,000",
             period: "6 Months",
             features: []
         }
