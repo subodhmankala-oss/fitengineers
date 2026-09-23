@@ -17,6 +17,9 @@ const Footer = () => {
                 </div>
                 <p className="copyright">
                     &copy; {new Date().getFullYear()} FitEngineerss. All rights reserved.
+                    <span className="image-credit">
+                        Body illustration adapted from wger (Termininja, CC BY-SA 3.0)
+                    </span>
                 </p>
             </div>
         </footer>

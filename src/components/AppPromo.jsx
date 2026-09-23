@@ -173,9 +173,6 @@ const AppPromo = () => {
                         <div className="phone-home-bar" />
                     </div>
                 </div>
-                <p className="app-promo-credit">
-                    Body illustration adapted from wger (Termininja, CC BY-SA 3.0)
-                </p>
             </div>
         </section>
     );

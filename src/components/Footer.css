@@ -60,6 +60,14 @@
     color: var(--text-secondary);
     font-size: 0.95rem;
     margin-top: 10px;
+    text-align: center;
+}
+
+.image-credit {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.72rem;
+    opacity: 0.6;
 }
 
 @media screen and (max-width: 480px) {
