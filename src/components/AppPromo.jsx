@@ -1,5 +1,8 @@
 import React from 'react';
-import { Headset, Download, Dumbbell, PersonStanding, MessageCircle, TrendingUp, ArrowRight } from 'lucide-react';
+import {
+    Headset, Download, Dumbbell, PersonStanding, MessageCircle, TrendingUp, ArrowRight,
+    Trophy, Flame, Scale, Moon, Footprints, FileBarChart, Utensils, ClipboardCheck, Timer, HeartPulse,
+} from 'lucide-react';
 import { usePopup } from '../context/PopupContext';
 import { APP_URL } from '../data/appLinks';
 import './AppPromo.css';
@@ -9,6 +12,53 @@ const features = [
     { icon: <PersonStanding size={16} />, label: 'Muscle balance map' },
     { icon: <TrendingUp size={16} />, label: 'Track your progress' },
 ];
+
+const feedColumns = [
+    {
+        duration: '116s',
+        cards: [
+            { icon: Trophy, tone: 'gold', title: 'New PR', text: 'Bench Press · 80 kg × 8' },
+            { icon: Dumbbell, tone: 'blue', title: 'Workout logged', text: 'Upper Body · 52 min' },
+            { icon: Utensils, tone: 'green', title: 'Protein', text: '142 / 150 g today' },
+            { icon: ClipboardCheck, tone: 'blue', title: 'Check-in sent', text: 'Photos + weight' },
+            { icon: Timer, tone: 'orange', title: 'Rest timer', text: '90 s · Set 3 of 4' },
+        ],
+    },
+    {
+        duration: '140s',
+        reverse: true,
+        cards: [
+            { icon: Flame, tone: 'orange', title: '7-day streak', text: 'Keep it going' },
+            { icon: MessageCircle, tone: 'blue', title: 'Coach', text: 'Great depth on squats!' },
+            { icon: Scale, tone: 'green', title: 'Body weight', text: '72.4 kg · ↓ 0.6 kg' },
+            { icon: Moon, tone: 'purple', title: 'Sleep', text: '7 h 40 m last night' },
+            { icon: Trophy, tone: 'gold', title: 'New PR', text: 'Deadlift · 140 kg' },
+        ],
+    },
+    {
+        duration: '126s',
+        cards: [
+            { icon: HeartPulse, tone: 'red', title: 'Calories burned', text: '540 kcal · Leg day' },
+            { icon: FileBarChart, tone: 'purple', title: 'Monthly report', text: 'Ready to view' },
+            { icon: Footprints, tone: 'green', title: 'Steps', text: '9,842 today' },
+            { icon: PersonStanding, tone: 'blue', title: 'Muscle map', text: 'Legs need work' },
+            { icon: ClipboardCheck, tone: 'orange', title: 'Plan updated', text: 'By your coach' },
+        ],
+    },
+];
+
+const FeedCard = ({ icon, tone, title, text }) => {
+    const Icon = icon;
+    return (
+        <div className="feed-card">
+            <span className={`feed-card-icon ${tone}`}><Icon size={16} /></span>
+            <span className="feed-card-body">
+                <strong>{title}</strong>
+                <small>{text}</small>
+            </span>
+        </div>
+    );
+};
 
 const AppPromo = () => {
     const { openPopup } = usePopup();
@@ -53,6 +103,20 @@ const AppPromo = () => {
             </div>
 
             <div className="app-promo-visual">
+                <div className="app-promo-feed" aria-hidden="true">
+                    {feedColumns.map((col, i) => (
+                        <div className="feed-col" key={i}>
+                            <div
+                                className={`feed-track${col.reverse ? ' reverse' : ''}`}
+                                style={{ animationDuration: col.duration }}
+                            >
+                                {Array.from({ length: 10 }, () => col.cards).flat().map((card, j) => (
+                                    <FeedCard key={j} {...card} />
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
                 <div className="phone" aria-hidden="true">
                     <div className="phone-notch" />
                     <div className="phone-screen">
