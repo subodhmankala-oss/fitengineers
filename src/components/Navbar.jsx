@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, ChevronDown, ArrowLeft } from 'lucide-react';
+import { Menu, X, ChevronDown, ArrowLeft, Download } from 'lucide-react';
+import { APP_URL } from '../data/appLinks';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -174,6 +175,16 @@ const Navbar = () => {
                     </ul>
 
                     <div className="navbar-right">
+                        <a
+                            href={APP_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="nav-download-btn"
+                        >
+                            <Download size={16} />
+                            <span className="nav-download-label">Download App</span>
+                            <span className="nav-download-label-short">App</span>
+                        </a>
                         <Link
                             to="/contact"
                             className="btn btn-primary nav-btn"

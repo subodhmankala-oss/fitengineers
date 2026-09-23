@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Hero from './Hero';
+import AppPromo from './AppPromo';
 import Services from './Services';
 import MyPrograms from './MyPrograms';
 import Pricing from './Pricing';
@@ -29,9 +29,12 @@ const Home = () => {
             return;
         }
 
-        // Extract section ID from path (e.g., "/about" -> "about")
-        // Default to 'home' if path is "/"
-        const sectionId = pathname === '/' ? 'home' : pathname.replace('/', '');
+        if (pathname === '/') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return;
+        }
+
+        const sectionId = pathname.replace('/', '');
 
         // Add small delay to ensure render is complete
         setTimeout(() => {
@@ -53,7 +56,7 @@ const Home = () => {
                 name="Subodh Mankala" 
                 type="website" 
             />
-            <Hero />
+            <AppPromo />
             <Testimonials />
             <About />
             <Services />
