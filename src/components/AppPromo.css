@@ -83,79 +83,28 @@
     gap: 10px;
 }
 
-.app-promo-form,
-.app-promo-success {
-    flex: 1 1 300px;
-}
-
-.app-promo-form {
-    display: flex;
-    min-width: 0;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+.app-promo-start {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 30px;
+    min-height: 58px;
     border-radius: 10px;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.03);
-    transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-}
-
-.app-promo-form:focus-within {
-    border-color: var(--accent-color);
-    box-shadow: var(--gradient-glow);
-}
-
-.app-promo-form input {
-    flex: 1;
-    min-width: 0;
-    padding: 18px 18px;
-    font-family: inherit;
-    font-size: 1rem;
-    color: var(--text-primary);
-    background: transparent;
-    border: none;
-    outline: none;
-}
-
-.app-promo-form input::placeholder {
-    color: var(--text-secondary);
-}
-
-.app-promo-form button {
-    padding: 0 24px;
-    font-family: inherit;
+    background: var(--gradient-neon);
+    color: #ffffff;
     font-size: 1.05rem;
     font-weight: 700;
-    color: #ffffff;
-    background: var(--gradient-neon);
-    border: none;
-    cursor: pointer;
     white-space: nowrap;
-    transition: filter 0.3s ease;
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.app-promo-form button:hover {
-    filter: brightness(1.12);
-}
-
-.app-promo-form button:disabled {
-    cursor: wait;
-    opacity: 0.7;
-}
-
-.app-promo-success {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 20px 22px;
-    border-radius: 10px;
-    border: 1px solid rgba(14, 165, 233, 0.4);
-    background: rgba(14, 165, 233, 0.08);
-    color: var(--text-primary);
-    font-weight: 500;
-}
-
-.app-promo-success svg {
-    color: var(--accent-color);
-    flex-shrink: 0;
+.app-promo-start:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(14, 165, 233, 0.5);
 }
 
 .app-promo-note {
@@ -449,27 +398,6 @@
     background: rgba(255, 255, 255, 0.5);
 }
 
-@media screen and (max-width: 1300px) {
-    .app-promo {
-        grid-template-columns: 11fr 9fr;
-    }
-
-    .app-promo-copy {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-}
-
-@media screen and (max-width: 1100px) {
-    .app-promo-form button {
-        padding: 0 18px;
-    }
-
-    .app-promo-download {
-        padding: 0 16px;
-    }
-}
-
 @media screen and (max-width: 1024px) {
     .app-promo-copy {
         padding: 150px 32px 70px;
@@ -513,6 +441,7 @@
         font-size: 1rem;
     }
 
+    .app-promo-start,
     .app-promo-download {
         flex: 1 1 100%;
         min-height: 54px;

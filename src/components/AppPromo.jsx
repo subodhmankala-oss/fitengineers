@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
-import { Headset, Check, Download, Dumbbell, PersonStanding, MessageCircle, TrendingUp } from 'lucide-react';
+import React from 'react';
+import { Headset, Download, Dumbbell, PersonStanding, MessageCircle, TrendingUp, ArrowRight } from 'lucide-react';
 import { usePopup } from '../context/PopupContext';
 import { APP_URL } from '../data/appLinks';
 import './AppPromo.css';
@@ -13,21 +12,6 @@ const features = [
 
 const AppPromo = () => {
     const { openPopup } = usePopup();
-    const [email, setEmail] = useState('');
-    const [status, setStatus] = useState('idle');
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setStatus('sending');
-        emailjs.send(
-            'service_z2euvfp',
-            'template_ampld46',
-            { from_name: 'App signup', from_email: email, program: 'FitEngineers App' },
-            'ojA8Hbo_W64Y_gLPO'
-        )
-            .then(() => setStatus('sent'))
-            .catch(() => setStatus('error'));
-    };
 
     return (
         <section className="app-promo" id="home">
@@ -52,33 +36,15 @@ const AppPromo = () => {
                     </ul>
 
                     <div className="app-promo-cta">
-                        {status === 'sent' ? (
-                            <div className="app-promo-success">
-                                <Check size={20} /> Thanks! We&apos;ll send your app access to {email}.
-                            </div>
-                        ) : (
-                            <form className="app-promo-form" onSubmit={handleSubmit}>
-                                <input
-                                    type="email"
-                                    required
-                                    placeholder="Enter your email"
-                                    aria-label="Email address"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                />
-                                <button type="submit" disabled={status === 'sending'}>
-                                    {status === 'sending' ? 'Sending…' : 'Get started'}
-                                </button>
-                            </form>
-                        )}
+                        <a href={APP_URL} target="_blank" rel="noopener noreferrer" className="app-promo-start">
+                            Get started <ArrowRight size={18} />
+                        </a>
                         <a href={APP_URL} target="_blank" rel="noopener noreferrer" className="app-promo-download">
                             <Download size={18} /> Download Now
                         </a>
                     </div>
                     <p className="app-promo-note">
-                        {status === 'error'
-                            ? 'Something went wrong. Please try again.'
-                            : 'Leave your email and we’ll get you set up in the app.'}
+                        Works in your browser — no install needed.
                         <button type="button" className="app-promo-expert" onClick={openPopup}>
                             <Headset size={15} /> Talk to an expert
                         </button>
